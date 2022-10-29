@@ -98,3 +98,54 @@ c. create action column
 a. click handler for inc/dec item
 b. click handler for remove item
 c. click handler for checkout
+
+18. Create Signin Screen
+
+a. create sign in form
+b. add email and password
+c. add signin button
+
+19. Connect to MongoDB Database
+
+a. create atlas mongodb database
+b. install local mongodb database
+c. npm install mongoose
+d. connect to mongodb database
+
+20. Seed Sample Data
+
+a. create product model
+b. create user model
+c. create seed route
+d. use route in server.js
+e. seed sample product
+
+21. Seed Sample Users
+
+a. create user model
+b. seed sample users
+c. create user routes
+
+22. Create Signin Backend API
+
+a. create signin api
+b. npm install jsonwebtoken
+c. define generateToken
+
+23. Complete Signin Screen
+
+a. handle submit action
+b. save token in store and local storage
+c. show username in header
+
+24. Create Shipping Screen
+
+a. create form inputs
+b. handle save shipping address
+c. add checkout wizard bar
+
+25. Create Sign Up Screen
+
+a. create input forms
+b. handle submit
+c. create backend api
