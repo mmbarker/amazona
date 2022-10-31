@@ -149,3 +149,25 @@ c. add checkout wizard bar
 a. create input forms
 b. handle submit
 c. create backend api
+
+26. Implement Select Payment Method Screen
+
+a. create input form
+b. handle submit
+
+27. Create Place Order Screen
+
+a. show cart items, payment and address
+b. handle place orderaction
+c. create order create api
+
+28. Implement Place Order Action
+
+a. handle place order action
+b. create order create api
+
+29. Create Order Screen
+
+a. create backend api for order/:id
+b. fetch order api in frontend
+c. show order information in 2 columns
