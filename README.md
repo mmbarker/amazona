@@ -206,3 +206,8 @@ d. connect it to github
 e. create mongodb atlas database
 f. set database connection in heroku env variables
 g. commit and push
+
+34. Add Sidebar and Search Box
+
+a. add sidebar
+b. add searchbox
