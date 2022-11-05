@@ -211,3 +211,9 @@ g. commit and push
 
 a. add sidebar
 b. add searchbox
+
+35. Create Search Screen
+
+a. show filters
+b. create api for searching products
+c. display results
