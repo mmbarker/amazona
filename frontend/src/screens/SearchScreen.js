@@ -139,8 +139,8 @@ export default function SearchScreen() {
             <ul>
               <li>
                 <Link
-                  className={'all' === category ? 'text-bold' : ''}
                   to={getFilterUrl({ category: 'all' })}
+                  className={'all' === category ? 'text-bold' : ''}
                 >
                   Any
                 </Link>
@@ -148,8 +148,8 @@ export default function SearchScreen() {
               {categories.map((c) => (
                 <li key={c}>
                   <Link
-                    className={c === category ? 'text-bold' : ''}
                     to={getFilterUrl({ category: c })}
+                    className={c === category ? 'text-bold' : ''}
                   >
                     {c}
                   </Link>
@@ -162,8 +162,8 @@ export default function SearchScreen() {
             <ul>
               <li>
                 <Link
-                  className={'all' === price ? 'text-bold' : ''}
                   to={getFilterUrl({ price: 'all' })}
+                  className={'all' === price ? 'text-bold' : ''}
                 >
                   Any
                 </Link>
