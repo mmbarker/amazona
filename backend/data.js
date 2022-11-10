@@ -44,8 +44,8 @@ const data = {
     },
     {
       // _id: '3',
-      name: 'Nike Slim Pant',
-      slug: 'nike-slim-pant',
+      name: 'Nike Slim Pants',
+      slug: 'nike-slim-pants',
       category: 'Pants',
       image: '/images/p3.jpg',
       price: 25,
@@ -57,8 +57,8 @@ const data = {
     },
     {
       // _id: '4',
-      name: 'Adidas Fit Pant',
-      slug: 'adidas-fit-pant',
+      name: 'Adidas Fit Pants',
+      slug: 'adidas-fit-pants',
       category: 'Pants',
       image: '/images/p4.jpg',
       price: 65,
