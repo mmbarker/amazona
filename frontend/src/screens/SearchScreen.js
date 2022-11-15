@@ -106,17 +106,21 @@ export default function SearchScreen() {
   }, [category, error, order, page, price, query, rating]);
 
   const [categories, setCategories] = useState([]);
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const { data } = await axios.get(`/api/products/categories`);
-        setCategories(data);
-      } catch (err) {
-        toast.error(getError(err));
-      }
-    };
-    fetchCategories();
-  }, [dispatch]);
+  useEffect(
+    () => {
+      const fetchCategories = async () => {
+        try {
+          const { data } = await axios.get(`/api/products/categories`);
+          setCategories(data);
+        } catch (err) {
+          toast.error(getError(err));
+        }
+      };
+      fetchCategories();
+    },
+    [dispatch],
+    categories
+  );
 
   const getFilterUrl = (filter) => {
     const filterPage = filter.page || page;
