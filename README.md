@@ -229,3 +229,9 @@ c. add menu for admin in header
 a. create dashboard ui
 b. implement backend api
 c. connect ui to backend
+
+38. Manage Products
+
+a. create product list ui
+b. implement backend api
+c. fetch data
