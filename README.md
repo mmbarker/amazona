@@ -241,3 +241,9 @@ c. fetch data
 a. create products button
 b. implement backend api
 c. handle on click
+
+40. Edit Product
+
+a. create edit button
+b. create edit product ui
+c. display product info in the input boxes
