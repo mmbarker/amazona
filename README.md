@@ -235,3 +235,9 @@ c. connect ui to backend
 a. create product list ui
 b. implement backend api
 c. fetch data
+
+39. Create Product
+
+a. create products button
+b. implement backend api
+c. handle on click
