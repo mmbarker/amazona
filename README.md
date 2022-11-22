@@ -247,3 +247,8 @@ c. handle on click
 a. create edit button
 b. create edit product ui
 c. display product info in the input boxes
+
+41. Implement Update Product
+
+a. create edit product backend api
+b. handle update click
