@@ -1,31 +1,33 @@
 import React, { useContext, useEffect, useReducer } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Store } from '../Store';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
+import { getError } from '../utils';
+import { Helmet } from 'react-helmet-async';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-import { Store } from '../Store';
-import { getError } from '../utils';
+import { useNavigate } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
       return { ...state, loading: true };
     case 'FETCH_SUCCESS':
-      return { ...state, orders: action.payload, loading: false };
+      return {
+        ...state,
+        orders: action.payload,
+        loading: false,
+      };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
     default:
       return state;
   }
 };
-
-export default function OrderHistoryScreen() {
+export default function OrderListScreen() {
+  const navigate = useNavigate();
   const { state } = useContext(Store);
   const { userInfo } = state;
-  const navigate = useNavigate();
-
   const [{ loading, error, orders }, dispatch] = useReducer(reducer, {
     loading: true,
     error: '',
@@ -33,18 +35,16 @@ export default function OrderHistoryScreen() {
 
   useEffect(() => {
     const fetchData = async () => {
-      dispatch({ type: 'FETCH_REQUEST' });
       try {
-        const { data } = await axios.get(
-          `/api/orders/mine`,
-
-          { headers: { Authorization: `Bearer ${userInfo.token}` } }
-        );
+        dispatch({ type: 'FETCH_REQUEST' });
+        const { data } = await axios.get(`/api/orders`, {
+          headers: { Authorization: `Bearer ${userInfo.token}` },
+        });
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
-      } catch (error) {
+      } catch (err) {
         dispatch({
           type: 'FETCH_FAIL',
-          payload: getError(error),
+          payload: getError(err),
         });
       }
     };
@@ -54,10 +54,9 @@ export default function OrderHistoryScreen() {
   return (
     <div>
       <Helmet>
-        <title>Order History</title>
+        <title>Orders</title>
       </Helmet>
-
-      <h1>Order History</h1>
+      <h1>Orders</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -67,6 +66,7 @@ export default function OrderHistoryScreen() {
           <thead>
             <tr>
               <th>ID</th>
+              <th>USER</th>
               <th>DATE</th>
               <th>TOTAL</th>
               <th>PAID</th>
@@ -78,6 +78,7 @@ export default function OrderHistoryScreen() {
             {orders.map((order) => (
               <tr key={order._id}>
                 <td>{order._id}</td>
+                <td>{order.user ? order.user.name : 'DELETED_USER'}</td>
                 <td>{order.createdAt}</td>
                 <td>{order.totalPrice.toFixed(2)}</td>
                 <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'NO'}</td>

@@ -259,3 +259,21 @@ a. create cloudinary account
 b. use the api key in env file
 c. handle upload file
 d. implement backend api to upload
+
+43. Delete Product
+
+a. show delete button
+b. implement backend api
+c. handle on click
+
+44. List Orders
+
+a. create order list screen
+b. implement backend api
+c. fetch and display orders
+
+45. Deliver Order
+
+a. add deliver button
+b. handle click action
+c. implement backend api for deliver
