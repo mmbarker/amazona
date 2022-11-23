@@ -252,3 +252,10 @@ c. display product info in the input boxes
 
 a. create edit product backend api
 b. handle update click
+
+42. Upload Product Image
+
+a. create cloudinary account
+b. use the api key in env file
+c. handle upload file
+d. implement backend api to upload
