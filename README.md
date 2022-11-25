@@ -277,3 +277,15 @@ c. fetch and display orders
 a. add deliver button
 b. handle click action
 c. implement backend api for deliver
+
+46. Delete Order
+
+a. add delete button
+b. handle click action
+c. implement backend api for delete
+
+47. List Users
+
+a. create user list screen
+b. implement backend api
+c. fetch and display users
