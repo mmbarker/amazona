@@ -289,3 +289,17 @@ c. implement backend api for delete
 a. create user list screen
 b. implement backend api
 c. fetch and display users
+
+48. Edit User
+
+a. create edit button
+b. create edit product ui
+c. display product info in input boxes
+d. implement backend api
+e. handle edit click
+
+49. Delete User
+
+a. add delete button
+b. handle click action
+c. implement backend api for delete
