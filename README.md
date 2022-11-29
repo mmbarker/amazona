@@ -303,3 +303,34 @@ e. handle edit click
 a. add delete button
 b. handle click action
 c. implement backend api for delete
+
+50. Choose Address on Google Map
+
+LESSON SKIPPED
+
+a. create google map credentials
+b. update .env file with google api key
+c. create api to send google api to frontend
+d. create map screen
+e. fetch google api
+f. getUserLocation
+g. install @react-google-maps/api
+h. use it in shipping screen
+i. apply map to the checkout screen
+
+51. Email order receipt by mailgun
+
+LESSON SKIPPED
+
+a. create mailgun account
+b. add and verify your domain to mailgun
+c. install mailgun-js
+d. set api key in env file
+e. change pay order in orderRouter
+f. send email order receipt
+
+52. Review Orders
+
+a. create submit review form
+b. handle submit
+c. implement backend api for review
