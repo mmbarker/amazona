@@ -334,3 +334,9 @@ f. send email order receipt
 a. create submit review form
 b. handle submit
 c. implement backend api for review
+
+53. Upload multiple images
+
+a. add images to product model
+b. get images in edit screen
+c. show images in product screen
